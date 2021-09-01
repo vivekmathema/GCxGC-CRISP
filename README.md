@@ -52,9 +52,16 @@ The ContourProfiler has advance Contour simulation neural nets based on Generati
 
 •General protocol:  (B. Contour Simulation | Synthesis) For Training, Select the folder for Source images (Source path)  Set the path for trained models (model path) and provide a unique Model id (Model id)  set the path for storing preview images (Preview images path)  Setup Hyperparameters & Image augmentation  Start training (the models can be immediately stored and preview images updates during training using hotkeys in simulation preview window). 
 For Synthesis, Select the trained model (model path) and provide the exact Model ID used for training & storage  Set the output location (Result images)  Set the required parameters (Z-dim, Contour intensity factors “see article for details”)  Apply image augmentation (optional) for each simulated images  Start synthesis (Synths. Contour button). 
+ 
+
+<img src="/images/gan_module.jpg" alt="Example of the Contour siumulation and generator training"/>
+
+CRISP has myriad of option in GUI which cannot be demonstrated here. The  substancial amount of details can be found in the Supplimentary Materials section of the article
+
+
   
-C. Contour Super-resolution 
- A super-resolution (SR) algorithm uses deep neural nets to clarify, sharpen, and upscale the digital image without losing its content and defining characteristics. This module is responsible for the enhancement of image resolution based on our own customized super-resolution model trained on our novel contour-like datasets, which enabled the production of a high-quality simulated contour dataset for the training classifier. The module is based on a modified version of Cascading Residual Network, which gives a very fast and accurate upscaling of images. The SR model has been trained on custom contour-like datasets which enables more precise upscaling and enhancement of contour images. However, the software provides a full-customizable option to build and train on your custom datasets for building database-specific SR models. The default upscaling is 2x.   
+## C. Contour Super-resolution
+A super-resolution (SR) algorithm uses deep neural nets to clarify, sharpen, and upscale the digital image without losing its content and defining characteristics. This module is responsible for the enhancement of image resolution based on our own customized super-resolution model trained on our novel contour-like datasets, which enabled the production of a high-quality simulated contour dataset for the training classifier. The module is based on a modified version of Cascading Residual Network, which gives a very fast and accurate upscaling of images. The SR model has been trained on custom contour-like datasets which enables more precise upscaling and enhancement of contour images. However, the software provides a full-customizable option to build and train on your custom datasets for building database-specific SR models. The default upscaling is 2x.   
 •General protocol: (C. Super-resolution Tab) For training, selected dataset (SR training dataset)  Setup hyperparameters (epochs, Learning rates, batch size)  Train models. For Upscaling, select the folder containing low-resolution images (LR input)  Select the folder containing trained models (SR model path)  Input name of the trained model (SR model id)  Press upscaling button  Upscaled images will be stored on SR output path. 
   
 ## D.  Contour Classifier Training and Inference 
