@@ -16,8 +16,6 @@ This github repository is the software section of manuscript (under review) enti
 CRISP is the novel platform that integrates multiple existing and new state-of-art deep learning (DL) platforms for untargeted profiling of Two-Dimensional Gas Chromatography and Time-of-Flight Mass Spectrometry (GC×GC-TOFMS)-generated data in terms of contour data. The open-source software toolkit is responsible for feature detection, simulation, data enhancement, and classification of GC×GC-TOFMS-generated contour for the untargeted metabolite profiling. The integrated platform has a novel ability to automatically construct aggregate feature representative contour (AFRC) from a group of supplied contour data belonging to different classes/groups to reduce manual selection biases and subsequently auto-identify contrasting regions of interest (ROIs) within this contour based on AFRC. These ROIs can be algorithmically detected and stacked together, using our algorithm termed as “DeepStacking*” to create a new representative feature map that maximizes the contrasting features and maximizes the profiling accuracy for each group during classifier training. The Integrated Generative Adversarial Network (GAN) is the main engine that simulates the synthetic Contour data based on the real samples. The Integrated GAN in use is a modified version of SGAN/WGAN that minimizes gradient vanishing and Lipschitz Constraint contained in general SGAN and WGANs. The synthesized output is computed for Frechet inception distance (FID) to evaluate their quality of likeliness to the source data. The integrated modules have the framework for efficient high-resolution contour image synthesis (64×64 - 512×512) resolution along with customizable contour intensity manipulation. The synthesized images can be subjected to a contour image super-resolution (SR) model based on Cascading Residual Network. The Contour Profiler’s SR network is fully customizable. It has been customized by default and trained using our Contour-like high resolution (HR) dataset to maximize the model’s capabilities to enhance contour image data. The Classifier is a collection of a customized version of a state-of-art Convolutional neural network (CNN) including VGG16/VGG19/Inception/RasNet/DenseNet for detecting features and obtaining maximum efficient models.  Instead of the usual 224×224 Input dimensions, the model can input (224×244 or 512×512) dimensions along with a customizable model optimizer feature to maximize the contour feature detection capabilities. All models once trained can be restored, continued training, and used independently to inference their corresponding inputs. All models created by Contour Profiler have their summary, ROIs Deep stacking coordinates, logs, and training history including models losses, FIDs*  and QScores*  stored whenever applicable. Taken together, the ContourProfiler provides an all-in-one open source integrated platform for advanced profiling of non-targeted GC×GC-TOFMS Contour data. [Note: * see article for details] 
   
  
-
- 
  
 **2. SOFTWARE ARCHITECTURE AND USES**
   
@@ -33,7 +31,7 @@ Each module can be used independently or in combination for the opted outcome. H
  
  <img src="/images/crisp_gui.jpg" alt="Friendly graphical user interface to carry out all operations"/>
  
- 
+ CRISP has myriad of option in GUI which cannot be demonstrated here.The substancial amount of details can be found in the Supplimentary Materials section of the article
   
 ## A. ROI & Deep Stacking
 
@@ -54,9 +52,6 @@ The ContourProfiler has advance Contour simulation neural nets based on Generati
 For Synthesis, Select the trained model (model path) and provide the exact Model ID used for training & storage  Set the output location (Result images)  Set the required parameters (Z-dim, Contour intensity factors “see article for details”)  Apply image augmentation (optional) for each simulated images  Start synthesis (Synths. Contour button). 
  
 
-<img src="/images/gan_module.jpg" alt="Example of the Contour siumulation and generator training"/>
-
-CRISP has myriad of option in GUI which cannot be demonstrated here. The  substancial amount of details can be found in the Supplimentary Materials section of the article
 
 
   
@@ -108,16 +103,8 @@ Same as the Google Drive option. The manin difference is that the models have to
 The option "Use google drive" should be deselected for this option to work
 
 
-
-
 ## Requirments for Python3 installation 
 
-Install the requirement for the minimum GPU version of the python
-
-```
- pip install -r requirements_gpu.txt
-
-```
 
 Install the requirement for the minimum CPU version of the python
 
@@ -127,13 +114,35 @@ Install the requirement for the minimum CPU version of the python
 
 ```
 
-## The stand alone windows package of CPU version of python (which is slow but relatively simple than GPU version) google drive link
+## The stand alone windows package for CPU version of python (which is slow but relatively simple than GPU version) google drive link
 
 ```
 https://github.com/vivekmathema/GCxGC-CRISP/edit/main/README.md  
 ```
 
-## For creating Anaconda environment  as OS independent version of CRIP, we currently recommend to use only CPU version. The GPU version requires advance CUDA installation knowledge for Linux and may not be suitable for starters.
+
+
+
+## Install the requirement for the minimum GPU version of the python (Fully operational for Windows OS)
+
+```
+ pip install -r requirements_gpu.txt
+
+```
+
+## The stand alone GPU verion of python is currently only available for Windows OS and required CUDA 9.5 or Above along with cuDNN 7.5 or above along with packahes in requirments_gpu.txt
+
+
+```
+CUDA Toolkit 11.0 Download
+https://developer.nvidia.com/cuda-11.0-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal
+
+cuDNN 8.00 Library for CUDA 11.0 
+https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.0.4/11.0_20200923/cudnn-11.0-windows-x64-v8.0.4.30.zip
+```
+
+
+## For creating Anaconda environment as OS independent version of CRIP, we currently recommend to use only CPU version. The GPU version requires advance CUDA installation knowledge for Linux and may not be suitable for starters. We will be providing support for instalaltion in future as the project proceeds.
 
 For CPU Version of Anaconda environment of CRISP. Users may have to Tweak the installation versions if any repository needs were updated or conda channel changes. These commands will simply install conda version of the pip3 requirements to run CRISP. Maynot not be suitable for some version of Ubuntu OS
 
@@ -148,7 +157,6 @@ For CPU Version of Anaconda environment of CRISP. Users may have to Tweak the in
 
 4) (GCxGC_CRISP env) conda >  python3  crsip.py
 ```
-
 
 
 ## CRISP Command line parameters infromation
