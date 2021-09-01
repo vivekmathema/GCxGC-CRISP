@@ -16,6 +16,9 @@ This github repository is the software section of manuscript (under review) enti
 CRISP is the novel platform that integrates multiple existing and new state-of-art deep learning (DL) platforms for untargeted profiling of Two-Dimensional Gas Chromatography and Time-of-Flight Mass Spectrometry (GC×GC-TOFMS)-generated data in terms of contour data. The open-source software toolkit is responsible for feature detection, simulation, data enhancement, and classification of GC×GC-TOFMS-generated contour for the untargeted metabolite profiling. The integrated platform has a novel ability to automatically construct aggregate feature representative contour (AFRC) from a group of supplied contour data belonging to different classes/groups to reduce manual selection biases and subsequently auto-identify contrasting regions of interest (ROIs) within this contour based on AFRC. These ROIs can be algorithmically detected and stacked together, using our algorithm termed as “DeepStacking*” to create a new representative feature map that maximizes the contrasting features and maximizes the profiling accuracy for each group during classifier training. The Integrated Generative Adversarial Network (GAN) is the main engine that simulates the synthetic Contour data based on the real samples. The Integrated GAN in use is a modified version of SGAN/WGAN that minimizes gradient vanishing and Lipschitz Constraint contained in general SGAN and WGANs. The synthesized output is computed for Frechet inception distance (FID) to evaluate their quality of likeliness to the source data. The integrated modules have the framework for efficient high-resolution contour image synthesis (64×64 - 512×512) resolution along with customizable contour intensity manipulation. The synthesized images can be subjected to a contour image super-resolution (SR) model based on Cascading Residual Network. The Contour Profiler’s SR network is fully customizable. It has been customized by default and trained using our Contour-like high resolution (HR) dataset to maximize the model’s capabilities to enhance contour image data. The Classifier is a collection of a customized version of a state-of-art Convolutional neural network (CNN) including VGG16/VGG19/Inception/RasNet/DenseNet for detecting features and obtaining maximum efficient models.  Instead of the usual 224×224 Input dimensions, the model can input (224×244 or 512×512) dimensions along with a customizable model optimizer feature to maximize the contour feature detection capabilities. All models once trained can be restored, continued training, and used independently to inference their corresponding inputs. All models created by Contour Profiler have their summary, ROIs Deep stacking coordinates, logs, and training history including models losses, FIDs*  and QScores*  stored whenever applicable. Taken together, the ContourProfiler provides an all-in-one open source integrated platform for advanced profiling of non-targeted GC×GC-TOFMS Contour data. [Note: * see article for details] 
   
  
+
+ 
+ 
 **2. SOFTWARE ARCHITECTURE AND USES**
   
 The ContourProfiler is designed for GC×GC-TOFMS and consists of four major components: 
@@ -25,6 +28,12 @@ C.                Coutour Enhancement
 D.                Contour Classifier training & Inference 
 Each module can be used independently or in combination for the opted outcome. However, the method can be applied for any other contour images of similar 2D datatype. Please Note once all steps A-D should be done for the same Mode during inference of unknown sample.
 
+
+ ## CRISP has a Full operational graphical user interface (GUI) which allows easy opration of each modules
+ 
+ <img src="/images/crisp_gui.jpg" alt="Friendly graphical user interface to carry out all operations"/>
+ 
+ 
   
 ## A. ROI & Deep Stacking
 
