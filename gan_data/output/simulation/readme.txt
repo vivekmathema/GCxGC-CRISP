@@ -1,0 +1,1 @@
+output contour images of traiend synthesizer is suggested to be stored here
