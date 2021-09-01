@@ -97,6 +97,7 @@ Here, the link of the google shared folder should be provided along with google 
 The CRISP automatically downloads the zipped model one at a time, and has provision to unzip and set as "use for processing"
 The option "Use Google Drive" should be enabled for this option to be selected.
 A demo google drive API is provided within the software but users have to set their google drive an API for goggle in the CRISP to use their custom google drive for online model use. Currently CRISP only supports the download of the model, the upload of the zipped model has to be done manually.
+[NOTE: Users may have to manually download using provided Google shared folder if the API-based internal download shows any issues due to large fiel size of updated Google policies]
 
 **(ii) Http server option**
 Same as the Google Drive option. The manin difference is that the models have to be stored in unsecured HTTP server. 
