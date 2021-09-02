@@ -1,1 +1,1 @@
-output of interene results will be here
+output of inference results can be stored in this folder
