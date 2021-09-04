@@ -1,0 +1,1 @@
+Setting for the ROI deepstacking module configuration can be stored here

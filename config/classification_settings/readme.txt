@@ -1,0 +1,1 @@
+Setting for the classification modules can be stored here
