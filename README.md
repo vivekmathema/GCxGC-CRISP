@@ -140,7 +140,8 @@ cuDNN 8.00 Library for CUDA 11.0
 https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.0.4/11.0_20200923/cudnn-11.0-windows-x64-v8.0.4.30.zip
 ```
 
-##cMicrosoft Visual C++ 2015 Redistributable Update 3 RC
+
+## Microsoft Visual C++ 2015 Redistributable Update 3 RC
 runtime-support may needed to be installed for proper working of tesorflow-gpu. The 64 bit version can be directly installed from the supplied binaries in google drive : 
 ```
 link: https://drive.google.com/file/d/1aSzn8cbMDICrXjG4WZyqkr5tNdYu2sro/view?usp=sharing
