@@ -129,7 +129,13 @@ https://drive.google.com/file/d/1dUnXUm61kfmaOcwwFQPB8eo-eouU3rcj/view?usp=shari
 
 ```
 
-## The stand alone GPU verion of python is currently only available for Windows OS and required CUDA 9.5 or Above along with cuDNN 7.5 or above along with packahes in requirments_gpu.txt
+## The stand alone GPU verion of python is currently only available for Windows OS and required CUDA 9.5 or above along with cuDNN 7.5 or above along with packages in requirments_gpu.txt
+
+Windows Standalone GPU version for python 3.6 
+```
+Google Drive link: https://drive.google.com/file/d/1RbSH2ViIzf-SacdBR1sB7G4Z4ROjBdBL/view?usp=sharing
+
+```
 
 
 ```
