@@ -87,7 +87,7 @@ Training dataset ratio               -->  85:15 default (i.e.: 85% training and 
 ```
 
 
-## Online Model downloand and storage option to Google Drive / HTTP server for automatic access
+## Online Model download and and storage option to Google Drive / HTTP server for automatic access
 
 CRISP has a built-in online model download module. This can be found under the "online module" tab for  Synthesizer, Super-resolution, and Classifier models.
 There are two ways models can be downloaded: (i) By using google drive (recommended)  & (ii) direct HTTP server 
@@ -159,9 +159,9 @@ For CPU Version of Anaconda environment of CRISP. Users may have to Tweak the in
 ```
 1) conda create --name GCxGC_CRISP python=3.6
 
-2.1) conda install --file requirements_cpu.txt   (for CPU version, recommended for Linux Ubuntu)
+2.1) conda install --file requirements_cpu.txt (for CPU version, recommended for Linux Ubuntu)
 
-2.1) conda install --file requirements_gpu.txt   (for GPU version, recommended for Windows OS)
+2.1) conda install --file requirements_gpu.txt (for GPU version, recommended for Windows OS)
 
 3) conda activate GCxGC_CRISP
 
