@@ -118,10 +118,8 @@ Install the requirement for the minimum CPU version of the python
 ## The stand alone windows package for CPU version of python (which is slow but relatively simple than GPU version) google drive link
 
 ```
-https://github.com/vivekmathema/GCxGC-CRISP/edit/main/README.md  
+https://drive.google.com/file/d/1dUnXUm61kfmaOcwwFQPB8eo-eouU3rcj/view?usp=sharing
 ```
-
-
 
 
 ## Install the requirement for the minimum GPU version of the python (Fully operational for Windows OS)
@@ -142,6 +140,16 @@ cuDNN 8.00 Library for CUDA 11.0
 https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.0.4/11.0_20200923/cudnn-11.0-windows-x64-v8.0.4.30.zip
 ```
 
+##cMicrosoft Visual C++ 2015 Redistributable Update 3 RC
+runtime-support may needed to be installed for proper working of tesorflow-gpu. The 64 bit version can be directly installed from the supplied binaries in google drive : 
+```
+link: https://drive.google.com/file/d/1aSzn8cbMDICrXjG4WZyqkr5tNdYu2sro/view?usp=sharing
+```
+
+Alternatively: Both 32-bit and 64-bit redistributions can be downloaded from :   
+~~~
+https://www.microsoft.com/en-us/download/confirmation.aspx?id=52685
+~~~
 
 ## For creating Anaconda environment as OS independent version of CRIP, we currently recommend to use only CPU version. The GPU version requires advance CUDA installation knowledge for Linux and may not be suitable for starters. We will be providing support for instalaltion in future as the project proceeds.
 
