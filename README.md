@@ -1,5 +1,5 @@
 ~~~
-## NOTICE: THE SOFTWARE REPOSITORY HAS MOST OF ITS CODES EUTHER IN COMPILED FORM OR PROTECTED WITH PASSOWRD TO MAINTAIN CONFIDENTIALITY DURING REVIEW PROCESS. ALL SOURCE CODES AND RELATED DATASETS WILL BE FULLY RELEASED UNDER SUITABLE OPENSOURCE LISCENCE ONCE THE MAIN MANUSCRIPT IS ACCEPTED FOR PUBLICATION
+## Notice: The software repository has most of its codes either in compiled form or protected with password to maintain confidentiality during review process. all source codes and related datasets will be fully released under suitable open source license once the main manuscript is accepted for publication
 ~~~
 
 This github repository is the software section of manuscript (under review) entitled "CRISP: A deep learning architecture for GC×GC-TOFMS contour ROI identification, simulation, and analysis of imaging metabolomics"  
@@ -65,7 +65,6 @@ This is the final module of Contour Profiler which uses a customized version of 
 • General Protocol: (D. Classification Training| Inference tab) For training, Set the source image dataset (Source images) Set the Model storage path (Model path) and Unique classifier model ID (Model id)  Select the Dense Neural Net for Transfer learning model (default VGG) Set the hyperparameters (Learning rate/decay, Optimizers, batch size, Training Iterations… etc.)  Set image augmentation (options in image augmentation tab)  Start training. For Inference, Select the trained model path (model path)  Input name of trained classifier model ID (Model id)  Set Input image contour source (Test images)  Set output inference result folder (Tagged images) & report file path and classification threshold and report file output format (Under Inferencing option tab)   Start Inferencing [Note: The preprocessing of data for inferencing should be done in the same manner as the model was trained for. i.e.: Full frame or ROI input in same image mode. For the Deep stacked contour images, the inference input should be of the same coordinates DeepStacked images as used for the training model. Use the (1A & C. AutoROIs and Deep Stacking Tab) and load the deep stacking data coordinates and preprocess the Input images before inputting for the inferencing. 
 
 
-
 ## CRISP Classifier Training | Inference module has builtin database construction module which allows generation of custom datasets
 
 ```
@@ -86,7 +85,6 @@ datset basename                      -->  MixCB_simulated_deepstacked_512res_dat
 Training dataset ratio               -->  85:15 default (i.e.: 85% training and 15% validation)
 ```
 
-
 ## Online Model download and and storage option to Google Drive / HTTP server for automatic access
 
 CRISP has a built-in online model download module. This can be found under the "online module" tab for  Synthesizer, Super-resolution, and Classifier models.
@@ -102,7 +100,6 @@ A demo google drive API is provided within the software but users have to set th
 **(ii) Http server option**
 Same as the Google Drive option. The manin difference is that the models have to be stored in unsecured HTTP server. 
 The option "Use google drive" should be deselected for this option to work
-
 
 ## Requirments for Python3 installation 
 
@@ -136,7 +133,6 @@ Windows Standalone GPU version for python 3.6
 Google Drive link: https://drive.google.com/file/d/1RbSH2ViIzf-SacdBR1sB7G4Z4ROjBdBL/view?usp=sharing
 
 ```
-
 
 ```
 CUDA Toolkit 11.0 Download
