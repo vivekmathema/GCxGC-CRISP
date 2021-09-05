@@ -1,5 +1,5 @@
 ~~~
-## Notice: The software repository has most of its codes either in compiled form or protected with password to maintain confidentiality during review process. all source codes and related datasets will be fully released under suitable open source license once the main manuscript is accepted for publication
+Notice: The software repository has most of its codes either in compiled form or protected with password to maintain confidentiality during review process. all source codes and related datasets will be fully released under suitable open source license once the main manuscript is accepted for publication
 ~~~
 
 This github repository is the software section of manuscript (under review) entitled "CRISP: A deep learning architecture for GC×GC-TOFMS contour ROI identification, simulation, and analysis of imaging metabolomics"  
@@ -108,7 +108,7 @@ Install the requirement for the minimum CPU version of the python
 
 
 ```
- pip install -r requirements_cpu.txt
+pip install -r requirements_cpu.txt
 
 ```
 
@@ -128,9 +128,9 @@ https://drive.google.com/file/d/1dUnXUm61kfmaOcwwFQPB8eo-eouU3rcj/view?usp=shari
 
 ## The stand alone GPU verion of python is currently only available for Windows OS and required CUDA 9.5 or above along with cuDNN 7.5 or above along with packages in requirments_gpu.txt
 
-Windows Standalone GPU version for python 3.6 
+Windows Standalone GPU version for python 3.6  (Google Drive link)
 ```
-Google Drive link: https://drive.google.com/file/d/1RbSH2ViIzf-SacdBR1sB7G4Z4ROjBdBL/view?usp=sharing
+https://drive.google.com/file/d/1RbSH2ViIzf-SacdBR1sB7G4Z4ROjBdBL/view?usp=sharing
 
 ```
 
@@ -146,7 +146,7 @@ https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.0.4/11.0_20
 ## Microsoft Visual C++ 2015 Redistributable Update 3 RC
 runtime-support may needed to be installed for proper working of tesorflow-gpu. The 64 bit version can be directly installed from the supplied binaries in google drive : 
 ```
-link: https://drive.google.com/file/d/1aSzn8cbMDICrXjG4WZyqkr5tNdYu2sro/view?usp=sharing
+https://drive.google.com/file/d/1aSzn8cbMDICrXjG4WZyqkr5tNdYu2sro/view?usp=sharing
 ```
 
 Alternatively: Both 32-bit and 64-bit redistributions can be downloaded from :   
