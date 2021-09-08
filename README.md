@@ -170,6 +170,9 @@ For CPU Version of Anaconda environment of CRISP. Users may have to Tweak the in
 
 
 ## CRISP Command line parameters infromation
+
+CRISP contains myriad of configuration option which is propert to be run by using configuration file. Thus, CRISP uses a configuration file to load all settings at once and can be immediately run without further user confrimation for each step.
+
 ------------------------------------------------------------------------------------------------------------------
 python3 CRISP.py    [-h | --help]              
                                       [--gui_type GUI_TYPE]
@@ -184,12 +187,14 @@ optional arguments:
 
   --gui_type GUI_TYPE   
                           Use different GUI Schemes. Five types available [ 0: Breeze, 1: Oxygen, 2: QtCurve, 3: Windows, 4:Fusion ]
+                          (There is also additional option to change skin colour of the GUI to Skyblue, Grayshade and System default in GUI mode only)
 
   --config_run CONFIG_RUN
-                        [Set 0: false, 1:true]. Run ContourProfiler in GUI mode ONLY. No configuration modules will be run and CRISP will open GUI with default settings
+                        [Set 0: false, 1:true]. Run ContourProfiler in GUI mode ONLY. No configuration modules will be run and CRISP will just GUI with default settings
 
   --config_fpath CONFIG_FPATH
                         full pathname of the configuration file to run. The Confiruation file will be run without any user input or confrimation
+                        (example:   > python3.exe  crisp.py ./config/default.cfg )
 
   --run_session RUN_SESSION
                         [None,gan_train, gan_syn, train_sr, sr_inf, cls_train, cls_inf] | None : Only loads gui with selected configuration. Following modes are avaialble
