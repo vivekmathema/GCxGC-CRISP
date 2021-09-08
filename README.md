@@ -171,7 +171,7 @@ For CPU Version of Anaconda environment of CRISP. Users may have to Tweak the in
 
 ## CRISP Command line parameters infromation
 
-CRISP contains myriad of configuration option which is propert to be run by using configuration file. Thus, CRISP uses a configuration file to load all settings at once and can be immediately run without further user confrimation for each step.
+CRISP contains myriad of configuration option which is advisable to be run by using a single configuration file. Thus, CRISP uses a configuration file to load all settings at once and most modules can be immediately run without further user confrimation for each step.
 
 ------------------------------------------------------------------------------------------------------------------
 python3 CRISP.py    [-h | --help]              
