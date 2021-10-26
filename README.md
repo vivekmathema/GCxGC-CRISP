@@ -98,6 +98,21 @@ A demo google drive API is provided within the software but users have to set th
 Same as the Google Drive option. The manin difference is that the models have to be stored in unsecured HTTP server. 
 The option "Use google drive" should be deselected for this option to work
 
+## INSTALLATION OF CRISP SOFTWARE
+
+**1) PRE-BULIT PACKAGE**
+This is a recommended setup for non-tecnical users. The User can directly downlaod the pre-built package and run the CRISP out-of-the-box
+
+## The stand alone windows package for CPU version of python (which is slow but relatively simple than GPU version) google drive link
+
+```
+https://drive.google.com/file/d/1dUnXUm61kfmaOcwwFQPB8eo-eouU3rcj/view?usp=sharing
+```
+
+After unzipping, goto "CRISP_root" folder and run  by double clicking "run-crisp-cpu.bat" , the CRISP GUI interface sould appear and you are ready to go.
+Please manually goto each folder (expect for python_env)  to see instruction in the Readme.txt folder for downloading adiditional pre-traiend models or Datasets.
+
+
 ## Requirments for Python3 installation 
 
 
@@ -109,11 +124,6 @@ pip install -r requirements_cpu.txt
 
 ```
 
-## The stand alone windows package for CPU version of python (which is slow but relatively simple than GPU version) google drive link
-
-```
-https://drive.google.com/file/d/1dUnXUm61kfmaOcwwFQPB8eo-eouU3rcj/view?usp=sharing
-```
 
 
 ## Install the requirement for the minimum GPU version of the python (Fully operational for Windows OS)
