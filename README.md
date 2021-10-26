@@ -101,6 +101,10 @@ The option "Use google drive" should be deselected for this option to work
 
 ## INSTALLATION OF CRISP SOFTWARE
 
+```
+We highly recommend all installation to be done on Python 3.6.8 (tested) 64 bit version 
+```
+
 ## 1A) PRE-BULIT CRISP CPU PACKAGE  (out-of-the-box )
 This is a recommended setup for non-tecnical users. User can directly downloadd the pre-built package and run the CRISP out-of-the-box
 
