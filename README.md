@@ -98,10 +98,11 @@ A demo google drive API is provided within the software but users have to set th
 Same as the Google Drive option. The manin difference is that the models have to be stored in unsecured HTTP server. 
 The option "Use google drive" should be deselected for this option to work
 
+
 ## INSTALLATION OF CRISP SOFTWARE
 
-**1) PRE-BULIT PACKAGE**
-This is a recommended setup for non-tecnical users. The User can directly downlaod the pre-built package and run the CRISP out-of-the-box
+## 1A) PRE-BULIT CRISP CPU PACKAGE  (out-of-the-box )
+This is a recommended setup for non-tecnical users. User can directly downloadd the pre-built package and run the CRISP out-of-the-box
 
 ## The stand alone windows package for CPU version of python (which is slow but relatively simple than GPU version) google drive link
 
@@ -113,25 +114,7 @@ After unzipping, goto "CRISP_root" folder and run  by double clicking "run-crisp
 Please manually goto each folder (expect for python_env)  to see instruction in the Readme.txt folder for downloading adiditional pre-traiend models or Datasets.
 
 
-## Requirments for Python3 installation 
-
-
-Install the requirement for the minimum CPU version of the python
-
-
-```
-pip install -r requirements_cpu.txt
-
-```
-
-
-
-## Install the requirement for the minimum GPU version of the python (Fully operational for Windows OS)
-
-```
- pip install -r requirements_gpu.txt
-
-```
+## 1B) PRE-BULIT CRISP GPU PACKAGE  (out-of-the-box | Requires CUDA 11.0 and cuDNN 8.00 in installed )
 
 ## The stand alone GPU verion of python is currently only available for Windows OS and required CUDA 9.5 or above along with cuDNN 7.5 or above along with packages in requirments_gpu.txt
 
@@ -149,6 +132,32 @@ cuDNN 8.00 Library for CUDA 11.0
 https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.0.4/11.0_20200923/cudnn-11.0-windows-x64-v8.0.4.30.zip
 ```
 
+After unzipping, goto "CRISP_root" folder and run  by double clicking "run-crisp-gpu.bat" , the CRISP GUI interface sould appear and you are ready to go.
+Please manually goto each folder (expect for python_env)  to see instruction in the Readme.txt folder for downloading adiditional pre-traiend models or Datasets.
+
+
+
+## 2) MANUAL INSTALLATION OF CRISP 
+
+The manual installation requires cop yof ths CRISP source code 
+
+**2A) Requirments for Python3 installation**
+
+Install the requirement for the minimum CPU version of the python
+
+```
+pip install -r requirements_cpu.txt
+
+```
+
+**2B) Requirments for Python3 installation**
+
+## Install the minimum requirement for the GPU version of the python (Fully operational for Windows OS with pre-requisits of CUDA and cUDNN + MS VC++ Libs)
+
+```
+ pip install -r requirements_gpu.txt
+
+```
 
 ## Microsoft Visual C++ 2015 or 2019 Redistributable Update
 
@@ -162,7 +171,9 @@ Alternatively: Both 32-bit and 64-bit redistributions can be downloaded from :
 https://www.microsoft.com/en-us/download/confirmation.aspx?id=52685
 ~~~
 
-## For creating Anaconda environment as OS independent version of CRIP, we currently recommend to use only CPU version. The GPU version requires advance CUDA installation knowledge for Linux and may not be suitable for starters. We will be providing support for instalaltion in future as the project proceeds.
+## ANACONDA ENVIRONMENT INSTALLATION 
+
+## For creating Anaconda environment as OS independent version of CRISP, we currently recommend to use only CPU version. The GPU version requires advance CUDA installation knowledge for Linux and may not be suitable for starters. We will be providing support for installtion in future as the project matures.
 
 For CPU Version of Anaconda environment of CRISP. Users may have to Tweak the installation versions if any repository needs were updated or conda channel changes. These commands will simply install conda version of the pip3 requirements to run CRISP. Maynot not be suitable for some version of Ubuntu OS
 
@@ -177,6 +188,8 @@ For CPU Version of Anaconda environment of CRISP. Users may have to Tweak the in
 
 4) (GCxGC_CRISP env) conda >  python3  crsip.py
 ```
+
+May need uses to adjust few librearies if there are some compatibilities issues.
 
 
 ## CRISP Command line parameters infromation
