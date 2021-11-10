@@ -1,0 +1,14 @@
+|=================| SuperResoultion Model |================|
+| 
+| Model name            : sr_model_MSE
+| Model Scale factor    : 2x
+| Training data source  : ./SR_data/training_data/contour_data/
+| Loss function type    : MSE
+| SR Model Optimizer    : Adam
+| Total epoche(s) run   : 1125
+| Target epoch          : 2000
+| LR Decay enabled      : False
+| Training batch size   : 8
+| Trained on            : GPU (CUDA_CORE)
+| 
+|===========================================================|
