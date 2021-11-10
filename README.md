@@ -13,8 +13,7 @@ This github repository is the software section of manuscript (under review) enti
 
 **1. GENERAL INFORMATION**
    
-CRISP is the novel platform that integrates multiple existing and new state-of-art deep learning (DL) platforms for untargeted profiling of Two-Dimensional Gas Chromatography and Time-of-Flight Mass Spectrometry (GC×GC-TOFMS)-generated data in terms of contour data. The open-source software toolkit is responsible for feature detection, simulation, data enhancement, and classification of GC×GC-TOFMS-generated contour for the untargeted metabolite profiling. The integrated platform has a novel ability to automatically construct aggregate feature representative contour (AFRC) from a group of supplied contour data belonging to different classes/groups to reduce manual selection biases and subsequently auto-identify contrasting regions of interest (ROIs) within this contour based on AFRC. These ROIs can be algorithmically detected and stacked together, using our algorithm termed as “Deepstacking*” to create a new representative feature map that maximizes the contrasting features and maximizes the profiling accuracy for each group during classifier training. The Integrated Generative Adversarial Network (GAN) is the main engine that simulates the synthetic Contour data based on the real samples. The Integrated GAN in use is a modified version of SGAN/WGAN that minimizes gradient vanishing and Lipschitz Constraint contained in general SGAN and WGANs. The synthesized output is computed for Frechet inception distance (FID) to evaluate their quality of likeliness to the source data. The integrated modules have the framework for efficient high-resolution contour image synthesis (64×64 - 512×512 pixels) along with customizable contour intensity manipulation. The synthesized images can be subjected to a contour image super-resolution (SR) model based on Cascading Residual Network. The Contour Profiler’s SR network is fully customizable. It has been customized by default and trained using our Contour-like high resolution (HR) dataset to maximize the model’s capabilities to enhance contour image data. The Classifier is a collection of a customized version of a state-of-art Convolutional neural network (CNN) including VGG16/VGG19/Inception/RasNet/DenseNet for detecting features and obtaining maximum efficient models.  Instead of the usual 224×224 Input dimensions, the model can input (224×244 or 512×512) dimensions along with a customizable model optimizer feature to maximize the contour feature detection capabilities. All models once trained can be restored, continued training, and used independently to inference their corresponding inputs. All models created by Contour Profiler have their summary, ROIs Deep stacking coordinates, logs, and training history including models losses, FIDs*  and QScores* stored whenever applicable. Taken together, the ContourProfiler provides an all-in-one open source integrated platform for advanced profiling of non-targeted GC×GC-TOFMS Contour data. [Note: * see article for details] 
-  
+**C**ontour **R**OI **I**dentification, **S**imulation, and **P**rofiling (CRISP) is the novel platform that integrates multiple existing and new state-of-art deep learning (DL) platforms for untargeted profiling of Two-Dimensional Gas Chromatography and Time-of-Flight Mass Spectrometry (GC×GC-TOFMS)-generated data in terms of contour data. The open-source software toolkit is responsible for feature detection, simulation, data enhancement, and classification of GC×GC-TOFMS-generated contour for the untargeted metabolite profiling. The integrated platform has a novel ability to automatically construct aggregate feature representative contour (AFRC) from a group of supplied contour data belonging to different classes/groups to reduce manual selection biases and subsequently auto-identify contrasting regions of interest (ROIs) within this contour based on AFRC. These ROIs can be algorithmically detected and stacked together, using our algorithm termed as “Deepstacking*” to create a new representative feature map that maximizes the contrasting features and maximizes the profiling accuracy for each group during classifier training. The Integrated Generative Adversarial Network (GAN) is the main engine that simulates the synthetic Contour data based on the real samples. The Integrated GAN in use is a modified version of SGAN/WGAN that minimizes gradient vanishing and Lipschitz Constraint contained in general SGAN and WGANs. The synthesized output is computed for Fréchet inception distance (FID) to evaluate their quality of likeliness to the source data. The integrated modules have the framework for efficient high-resolution contour image synthesis (64×64 - 512×512 pixels) along with customizable contour intensity manipulation. The synthesized images can be subjected to a contour image super-resolution (SR) model based on Cascading Residual Network. The Contour Profiler’s SR network is fully customizable. It has been customized by default and trained using our Contour-like high resolution (HR) dataset to maximize the model’s capabilities to enhance contour image data. The Classifier is a collection of a customized version of a state-of-art Convolutional neural network (CNN) including VGG16/VGG19/Inception/RasNet/DenseNet for detecting features and obtaining maximum efficient models.  Instead of the usual 224×224 Input dimensions, the model can input (224×244 or 512×512) dimensions along with a customizable model optimizer feature to maximize the contour feature detection capabilities. All models once trained can be restored, continued training, and used independently to inference their corresponding inputs. All models created by Contour Profiler have their summary, ROIs Deep stacking coordinates, logs, and training history including models losses, FIDs*  and QScores* stored whenever applicable. Taken together, the CRISP provides an all-in-one open source integrated platform for advanced profiling of non-targeted GC×GC-TOFMS Contour data. [Note: * see article for details] 
  
  
 **2. SOFTWARE ARCHITECTURE AND ITS USES**
@@ -75,7 +74,7 @@ Dataset class name annotation rules
 Custom classifier database construction hints:
 Sample classifier dataset construction is ( ./CRISP_rootfolder/classifier_data/training_dataest_construct_example/mixCB_simulated_deepstacked_512res ) 
 
-CRISP--> [ d)Classifier|Inference ]  -->  Build dataset --> whole dataset cosntruction option
+CRISP--> [ d)Classifier|Inference ]  -->  Build dataset --> whole dataset cosntruction option for training classifier
 basepath for entire classes          -->  ./CRISP_rootfolder/classifier_data/training_dataest_construct_example/mixCB_simulated_deepstacked_512res
 dataset build path                   -->  ./CRISP_rootfolder/classifier_data/outputs/sample_dataset/
 datset basename                      -->  MixCB_simulated_deepstacked_512res_dataset
@@ -105,19 +104,19 @@ The option "Use google drive" should be deselected for this option to work
 We highly recommend all installations to be done on Python v3.6.8 (tested) 64 bit 
 ```
 
-## 1A) PRE-BULIT CRISP CPU PACKAGE  (out-of-the-box )
+## 1A) PRE-BUILT CRISP CPU PACKAGE  (out-of-the-box )
 This is a recommended setup for non-tecnical users. User can directly downloadd the pre-built package and run the CRISP out-of-the-box
 
 ## The stand alone windows package for CPU version of python (which is slow but relatively simple than GPU version) google drive link
 
 ```
-https://drive.google.com/file/d/1RbSH2ViIzf-SacdBR1sB7G4Z4ROjBdBL/view?usp=sharing
+https://drive.google.com/file/d/1B3c8JntkUtaQu3eaCL3UJjpOJiVVhr7X/view?usp=sharing
 ```
 
 After unzipping, goto "CRISP_root" folder and run  by double clicking "run-crisp-cpu.bat" , the CRISP GUI interface sould appear and you are ready to go.
 Please manually goto each folder (expect for python_env)  to see instruction in the Readme.txt folder for downloading adiditional pre-traiend models or Datasets.
 
-The portable package contains full running example of most modules in CRISP. Just open and start the  Train/Inference button to view default examples.
+**The portable package contains full running example of most modules in CRISP. Just open and start the  Train/Inference/Synthesize button to view default examples.**
 
 ## 1B) PRE-BULIT CRISP GPU PACKAGE  (out-of-the-box | Requires CUDA 11.0 and cuDNN 8.00 in installed )
 
@@ -140,6 +139,16 @@ https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.0.4/11.0_20
 After unzipping, goto "CRISP_root" folder and run  by double clicking "run-crisp-gpu.bat" , the CRISP GUI interface sould appear and you are ready to go.
 Please manually goto each folder (expect for python_env)  to see instruction in the Readme.txt folder for downloading adiditional pre-traiend models or Datasets.
 
+
+## Running CRIP using COmmand line interface
+Current version of CRISP supports using configuration file to run Tran/inference/synthesis batch operation in CRISP.
+In order to run batch operation,goto windows consoel and change working directly to CRISP_root>
+Then, use run_console.bat from the command line in console.
+
+```
+Command line help : (console) CRISP_root > run_console.bat crisp.py --help 
+Example syntax    : (console) CRISP_root> run_console.bat crisp.py --run_session  cls_inf   --config_fpath  ./config/default.conf 
+```
 
 
 ## 2) MANUAL INSTALLATION OF CRISP 
@@ -208,7 +217,6 @@ python3 CRISP.py    [-h | --help]
                                       [--config_fpath CONFIG_FPATH] 
                                       [--run_session RUN_SESSION]
 
-
 optional arguments:
 
   -h, --help          Shows this command line help message and exits CRISP
@@ -240,4 +248,5 @@ optional arguments:
 
 ------------------------------------------------------------------------------------------------------------------
 
-The CRISP software will be under constant development and minor bugs will be fixed overtime. The main goal of making the software open source is for letting larger community to participate, fork and assist in custom use and development of Deep learning-based techniques in GC×GC-TOFMS contour image metabolomics.
+** The CRISP software will be under constant development and minor bugs will be fixed overtime.** The main goal of making the software open source is for letting larger community to participate, fork and assist in custom use and continous development of Deep learning-based techniques in GC×GC-TOFMS contour image metabolomics.
+
