@@ -1,0 +1,2 @@
+Store the custom configuration file here.
+Please note that even you store the configuration for super resoultion module, all other configurations for remaning modules at that instance will also be stored.
