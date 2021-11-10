@@ -1,1 +1,0 @@
-Setting for the super resoultion module can be stored here

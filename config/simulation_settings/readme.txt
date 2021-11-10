@@ -1,1 +1,0 @@
-Setting for the GAN module configuration can be stored here
