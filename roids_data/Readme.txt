@@ -1,0 +1,2 @@
+Use the example source contour images (./datasets/true_images) for AFRC, DeepStacking & Full contour extraction
+A Sample Deepstack ROIs for Norma vs ESRD-DM is provided by default. Can use with the default traiend models and datasets
