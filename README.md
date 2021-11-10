@@ -45,7 +45,7 @@ Each module can be used independently or in combination for the opted outcome. H
 [Note: *You can skip this section if you want to use entire contour plot for the simulation and classification. However, if you use this option, the same ROIs deep stacking configuration should be used for all steps in CRISP]. 
     
 ## B. Contour modeling & Generator (Contour Synthesis & Inference) 
-The CRISP has advance Contour simulation neural nets based on Generative adversteral network (GANs) with multiple customizable features.  The generator can train the model from 64×64 - 512×512 pixel contours with limited sample size and good outcome. The larger sample size can provide better results based on the diversity of the original images. There is an option to set hyperparameters and details options for setting FIDs, Z-vectors, RELU, Learning rates and model Optimizers (B. Contour synthesis --> 1. Hyperparameters). The image augmentation (B. Contour synthesis --> 2. Augmentation) tab allows the addition of multiple different filters (e.g: dilation, distortion, erosion, contrast, brightness, noise, edge sharpening, etc.) to initially expand the diversity of limited contours being fed to the generator without actually creating any significant change in the overall profile of the input contours. This enhances the dataset for the generator to train better especially in low-sample conditions. The real-time graphs of model loss and preview of the model along with FID curves will be shown during training for getting the status of the generator. The qScore (which forms qCurve) is a customized matrix that will tentatively indicate the quality of the output (0.0000-1.0000) mainly based on the sharpness/blurriness feature of the synthetic image during training as compared to the original contour image distribution. If the sharpness of images is relatively similar to that of source data, the QScore will approximately be 1.00. This is not a reliable score but gives the user the trend of ongoing simulation training as a real-time model feature update. The training models and their history can be stored/restored at any point of the training along with the configuration. Once the model is trained enough (based on FID curves, Model loss, and preview images) the model can be used for synthesizing entirely new contour plots without requiring original datasets (B. Contour synthesis --> 3. Synthesize) in a customizable grid of 1×1 – 10×10 shape. There is also a novel advanced option to control the intensity of entities in the synthesized Contour which in the real situation often relates to the concentration of metabolites. This feature works best when the source images have a minimum of background noise or column bleeding.  The image augmentation feature can be applied to the synthesized output contours as well which will assist in increasing the diversity of the synthesized samples. The advanced features of manipulating the Z-vector cab lead to higher diversity of the generated samples. Please note, do not mix different extraction modes (Normal/HEDN/gradient) while Contour simulation and Training. It must be the same with the same ROIs/DeepStacking (if applied earlier). The source data is not required once the model is trained enough. All models are compatible for continued training. 
+The CRISP has advance Contour simulation neural nets based on Generative adversteral network (GANs) with multiple customizable features.  The generator can train the model from 64×64 - 512×512 pixel contours with limited sample size and good outcome. The larger sample size can provide better results based on the diversity of the original images. There is an option to set hyperparameters and details options for setting FIDs, Z-vectors, RELU, Learning rates and model Optimizers (B. Contour synthesis --> 1. Hyperparameters). The image augmentation (B. Contour synthesis --> 2. Augmentation) tab allows the addition of multiple different filters (e.g: dilation, distortion, erosion, contrast, brightness, noise, edge sharpening, etc.) to initially expand the diversity of limited contours being fed to the generator without actually creating any significant change in the overall profile of the input contours. This enhances the dataset for the generator to train better especially in low-sample conditions. The real-time graphs of model loss and preview of the model along with FID curves will be shown during training for getting the status of the generator. The qScore (which forms qCurve) is a customized matrix that will tentatively indicate the quality of the output (0.0000-1.0000) mainly based on the sharpness/blurriness feature of the synthetic image during training as compared to the original contour image distribution. If the sharpness of images is relatively similar to that of source data, the qScore (0.0-0.17) will approximately be equal to 1.7. This is not a reliable score but gives the user the trend of ongoing simulation training as a real-time model feature update. The training models and their history can be stored/restored at any point of the training along with the configuration. Once the model is trained enough (based on FID curves, Model loss, and preview images) the model can be used for synthesizing entirely new contour plots without requiring original datasets (B. Contour synthesis --> 3. Synthesize) in a customizable grid of 1×1 – 10×10 shape. There is also a novel advanced option to control the intensity of entities in the synthesized Contour which in the real situation often relates to the concentration of metabolites. This feature works best when the source images have a minimum of background noise or column bleeding.  The image augmentation feature can be applied to the synthesized output contours as well which will assist in increasing the diversity of the synthesized samples. The advanced features of manipulating the Z-vector cab lead to higher diversity of the generated samples. It must be the same with the same ROIs/DeepStacking (if applied earlier). The source data is not required once the model is trained enough. All models are compatible for continued training. 
 
 •General protocol:  (B. Contour Simulation | Synthesis) For Training, Select the folder for Source images (Source path) --> Set the path for trained models (model path) and provide a unique Model id (Model id) --> set the path for storing preview images (Preview images path) --> Setup Hyperparameters & Image augmentation --> Start training (the models can be immediately stored and preview images updates during training using hotkeys in simulation preview window). 
 For Synthesis, Select the trained model (model path) and provide the exact Model ID used for training & storage --> Set the output location (Result images) --> Set the required parameters (Z-dim, Contour intensity factors “see article for details”) --> Apply image augmentation (optional) for each simulated images --> Start synthesis (Synths. Contour button). 
@@ -81,9 +81,9 @@ datset basename                      -->  MixCB_simulated_deepstacked_512res_dat
 Training dataset ratio               -->  85:15 default (i.e.: 85% training and 15% validation)
 ```
 
-## Online Model download and and storage option to Google Drive / HTTP server for automatic access
+## Online Model download and storage option to Google Drive / HTTP server for automatic access
 
-CRISP has a built-in online model download module. This can be found under the "online module" tab for  Synthesizer, Super-resolution, and Classifier models.
+CRISP has a built-in online model download module. This can be found under the "online module" tab for Synthesizer, Super-resolution, and Classifier models.
 There are two ways models can be downloaded: (i) By using google drive (recommended)  & (ii) direct HTTP server 
 
 **(i) Google Drive option**
@@ -94,8 +94,7 @@ A demo google drive API is provided within the software but users have to set th
 [NOTE: Users may have to manually download using provided Google shared folder if the API-based internal download shows any issues due to large fiel size of updated Google policies]
 
 **(ii) Http server option**
-Same as the Google Drive option. The manin difference is that the models have to be stored in unsecured HTTP server. 
-The option "Use google drive" should be deselected for this option to work
+Same as the Google Drive option. The main difference is that the models have to be stored in unsecured HTTP server. The option "Use google drive" should be deselected for this option to work.
 
 
 ## INSTALLATION OF CRISP SOFTWARE
@@ -105,7 +104,7 @@ We highly recommend all installations to be done on Python v3.6.8 (tested) 64 bi
 ```
 
 ## 1A) PRE-BUILT CRISP CPU PACKAGE  (out-of-the-box )
-This is a recommended setup for non-tecnical users. User can directly downloadd the pre-built package and run the CRISP out-of-the-box
+This is a recommended setup for non-technical users. User can directly downloaded the pre-built package and run the CRISP out-of-the-box
 
 ## The stand alone windows package for CPU version of python (which is slow but relatively simple than GPU version) google drive link
 
@@ -113,14 +112,13 @@ This is a recommended setup for non-tecnical users. User can directly downloadd 
 https://drive.google.com/file/d/1B3c8JntkUtaQu3eaCL3UJjpOJiVVhr7X/view?usp=sharing
 ```
 
-After unzipping, goto "CRISP_root" folder and run  by double clicking "run-crisp-cpu.bat" , the CRISP GUI interface sould appear and you are ready to go.
-Please manually goto each folder (expect for python_env)  to see instruction in the Readme.txt folder for downloading adiditional pre-traiend models or Datasets.
+After unzipping, goto "CRISP_root" folder and run by double clicking "run-crisp-cpu.bat" , the CRISP GUI interface should appear and you are ready to go. Please manually go to each folder (expect for python_env) to see instruction in the Readme.txt folder for downloading additional pre-trained models or Datasets.
 
 **The portable package contains full running example of most modules in CRISP. Just open and start the  Train/Inference/Synthesize button to view default examples.**
 
-## 1B) PRE-BULIT CRISP GPU PACKAGE  (out-of-the-box | Requires CUDA 11.0 and cuDNN 8.00 in installed )
+## 1B) PRE-BULIT CRISP GPU PACKAGE  (out-of-the-box | Requires CUDA 11.0 and cuDNN 8.00 in installed)
 
-## The stand alone GPU verion of python is currently only available for Windows OS and required CUDA 9.5 or above along with cuDNN 7.5 or above along with packages in requirments_gpu.txt
+## The standalone GPU version of python is currently only available for Windows OS and required CUDA 9.5 or above along with cuDNN 7.5 or above along with packages in requirments_gpu.txt
 
 Windows Standalone GPU version for python 3.6  (Google Drive link)
 ```
@@ -136,14 +134,11 @@ cuDNN 8.00 Library for CUDA 11.0
 https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.0.4/11.0_20200923/cudnn-11.0-windows-x64-v8.0.4.30.zip
 ```
 
-After unzipping, goto "CRISP_root" folder and run  by double clicking "run-crisp-gpu.bat" , the CRISP GUI interface sould appear and you are ready to go.
-Please manually goto each folder (expect for python_env)  to see instruction in the Readme.txt folder for downloading adiditional pre-traiend models or Datasets.
+After unzipping, goto "CRISP_root" folder and run by double clicking "run-crisp-gpu.bat" , the CRISP GUI interface sould appear and you are ready to go. Please manually go to each folder (expect for python_env) to see instruction in the Readme.txt folder for downloading additional pre-trained models or Datasets.
 
 
-## Running CRIP using COmmand line interface
-Current version of CRISP supports using configuration file to run Tran/inference/synthesis batch operation in CRISP.
-In order to run batch operation,goto windows consoel and change working directly to CRISP_root>
-Then, use run_console.bat from the command line in console.
+## Running CRISP using Command line interface
+Current version of CRISP supports using configuration file to run Tran/inference/synthesis batch operation in CRISP. In order to run batch operation, goto windows console and change working directly to CRISP_root> Then, use run_console.bat from the command line in console.
 
 ```
 Command line help : (console) CRISP_root > run_console.bat crisp.py --help 
@@ -203,12 +198,12 @@ For CPU Version of Anaconda environment of CRISP. Users may have to Tweak the in
 4) (GCxGC_CRISP env) conda >  python3  crisp.py
 ```
 
-May need uses to adjust few librearies if there are some compatibilities issues.
+May need uses to adjust few libraries if there are some compatibilities issues.
 
 
-## CRISP Command line parameters infromation
+## CRISP Command line parameters information
 
-CRISP contains myriad of configuration option which is advisable to be run by using a single configuration file. Thus, CRISP uses a configuration file to load all settings at once and most modules can be immediately run without further user confrimation for each step.
+CRISP contains myriad of configuration option which is advisable to be run by using a single configuration file. Thus, CRISP uses a configuration file to load all settings at once and most modules can be immediately run without further user confirmation for each step.
 
 ------------------------------------------------------------------------------------------------------------------
 python3 crisp.py    [-h | --help]              
