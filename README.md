@@ -150,7 +150,7 @@ Example syntax    : (console) CRISP_root> run_console.bat crisp.py --run_session
 
 The manual installation requires cop yof ths CRISP source code 
 
-**2A) Requirments for Python3 installation**
+**2A) Requirements for Python3 installation**
 
 Install the requirement for the minimum CPU version of the python
 
@@ -159,9 +159,9 @@ pip install -r requirements_cpu.txt
 
 ```
 
-**2B) Requirments for Python3 installation**
+**2B) Requirements for Python3 installation**
 
-## Install the minimum requirement for the GPU version of the python (Fully operational for Windows OS with pre-requisits of CUDA and cUDNN + MS VC++ Libs)
+## Install the minimum requirement for the GPU version of the python (Fully operational for Windows OS with pre-requisites of CUDA and cUDNN + MS VC++ Libs)
 
 ```
  pip install -r requirements_gpu.txt
@@ -182,7 +182,7 @@ https://www.microsoft.com/en-us/download/confirmation.aspx?id=52685
 
 ## ANACONDA ENVIRONMENT INSTALLATION 
 
-## For creating Anaconda environment as OS independent version of CRISP, we currently recommend to use only CPU version. The GPU version requires advance CUDA installation knowledge for Linux and may not be suitable for starters. We will be providing support for installtion in future as the project matures.
+## For creating Anaconda environment as OS independent version of CRISP, we currently recommend to use only CPU version. The GPU version requires advance CUDA installation knowledge for Linux and may not be suitable for starters. We will be providing support for installation in future as the project matures.
 
 For CPU Version of Anaconda environment of CRISP. Users may have to Tweak the installation versions if any repository needs were updated or conda channel changes. These commands will simply install conda version of the pip3 requirements to run CRISP. Maynot not be suitable for some version of Ubuntu OS
 
@@ -221,7 +221,7 @@ optional arguments:
                           (There is also additional option to change skin colour of the GUI to Skyblue, Grayshade and System default in GUI mode only)
 
   --config_run CONFIG_RUN
-                        [Set 0: false, 1:true]. Run ContourProfiler in GUI mode ONLY. No configuration modules will be run and CRISP will just GUI with default settings
+                        [Set 0: false, 1:true]. Run CRISP in GUI mode ONLY. No configuration modules will be run and CRISP will just GUI with default settings
 
   --config_fpath CONFIG_FPATH
                         full pathname of the configuration file to run. The Confiruation file will be run without any user input or confrimation
