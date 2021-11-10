@@ -1,1 +1,0 @@
-This folder holds the logging information for tasking being conducted in CRISP. It is useful for debugging and tracking the changes
