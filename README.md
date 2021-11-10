@@ -200,7 +200,7 @@ For CPU Version of Anaconda environment of CRISP. Users may have to Tweak the in
 
 3) conda activate GCxGC_CRISP
 
-4) (GCxGC_CRISP env) conda >  python3  crsip.py
+4) (GCxGC_CRISP env) conda >  python3  crisp.py
 ```
 
 May need uses to adjust few librearies if there are some compatibilities issues.
@@ -211,7 +211,7 @@ May need uses to adjust few librearies if there are some compatibilities issues.
 CRISP contains myriad of configuration option which is advisable to be run by using a single configuration file. Thus, CRISP uses a configuration file to load all settings at once and most modules can be immediately run without further user confrimation for each step.
 
 ------------------------------------------------------------------------------------------------------------------
-python3 CRISP.py    [-h | --help]              
+python3 crisp.py    [-h | --help]              
                                       [--gui_type GUI_TYPE]
                                       [--config_run CONFIG_RUN]              
                                       [--config_fpath CONFIG_FPATH] 
@@ -243,10 +243,10 @@ optional arguments:
                         cls_inf    : Load and run gui for classifier inferencing
                         
                         NOTE:  Commandline configuration run is not currently available for ROIs and DeepStacking. 
-                                   Due to large numbers of parameters the defination of  each parameter is commented in configuration file itself. 
-                                   The Definations of most parameters are presented as tool tip text in status bar of GUI nterface.
+                               Due to large numbers of parameters the defination of  each parameter is commented in configuration file itself. 
+                               The Definations of most parameters are presented as tool tip text in status bar of GUI nterface.
 
 ------------------------------------------------------------------------------------------------------------------
 
-** The CRISP software will be under constant development and minor bugs will be fixed overtime.** The main goal of making the software open source is for letting larger community to participate, fork and assist in custom use and continous development of Deep learning-based techniques in GC×GC-TOFMS contour image metabolomics.
+**The CRISP software will be under constant development and minor bugs will be fixed overtime.** The main goal of making the software open source is for letting larger community to participate, fork and assist in custom use and continous development of Deep learning-based techniques in GC×GC-TOFMS contour image metabolomics.
 
