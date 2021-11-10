@@ -111,12 +111,13 @@ This is a recommended setup for non-tecnical users. User can directly downloadd 
 ## The stand alone windows package for CPU version of python (which is slow but relatively simple than GPU version) google drive link
 
 ```
-https://drive.google.com/file/d/1dUnXUm61kfmaOcwwFQPB8eo-eouU3rcj/view?usp=sharing
+https://drive.google.com/file/d/1RbSH2ViIzf-SacdBR1sB7G4Z4ROjBdBL/view?usp=sharing
 ```
 
 After unzipping, goto "CRISP_root" folder and run  by double clicking "run-crisp-cpu.bat" , the CRISP GUI interface sould appear and you are ready to go.
 Please manually goto each folder (expect for python_env)  to see instruction in the Readme.txt folder for downloading adiditional pre-traiend models or Datasets.
 
+The portable package contains full running example of most modules in CRISP. Just open and start the  Train/Inference button to view default examples.
 
 ## 1B) PRE-BULIT CRISP GPU PACKAGE  (out-of-the-box | Requires CUDA 11.0 and cuDNN 8.00 in installed )
 
