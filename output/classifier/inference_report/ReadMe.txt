@@ -1,0 +1,1 @@
+The result of inference for classifier is stored here by default. The Results contains report file in CSV, TSV or TXT file along with the watermarked tagged contour images (in same folder). A sample result output for inference results is given here

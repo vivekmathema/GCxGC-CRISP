@@ -1,0 +1,39 @@
+
+------------------[ CRISPs parameter ]------------------
+
+#Process time stamp : 10/11/2021 11:28:44
+#CRISP running mode : classifier_inference
+#CRISP Logging mode : True
+
+==================[ Classifier parameters ]==================
+
+#Class. model id         : MixCB_fullcontour_original
+#Class. cnn model artict.: VGG16
+#Class. training dim.    : (512, 512)
+#Class. training  path   : ./classifier_data/datasets/MixCB
+#Class. model path       : ./classifier_data/trained_weights/MixCB_fullcontour_original
+#Class. images path      : ./classifier_data/inference_samples/fullcontour_test_samples
+#Class. output path      : ./output/classifier/inference_report
+#Class. training batch   : 8
+#Class. autosave freq.   : 50
+#Class. initial LR       : 0.0001000000
+#Class. LR decay enabled : True
+#Class. LR decay freq.   : 500
+#Class. LR decay rate    : 25%
+#Class. training epoch   : 9999
+#Class. optimizer type   : Adam
+#Class. thresthold       : 75.00
+#Class. processor use    : GPU (CUDA_CORE)
+#Class. memory growth    : False
+#Using Offline base model  : True)
+================================================================
+
+SN.,Image_source,Inferred_Class,Confidence
+0,./classifier_data/inference_samples/fullcontour_test_samples\esrddm00002.jpg,1ESRD-DM [Code: [1]],[99.70644]
+1,./classifier_data/inference_samples/fullcontour_test_samples\esrddm00004.jpg,1ESRD-DM [Code: [1]],[99.97409]
+2,./classifier_data/inference_samples/fullcontour_test_samples\esrddm00006.jpg,1ESRD-DM [Code: [1]],[99.99924]
+3,./classifier_data/inference_samples/fullcontour_test_samples\esrddm00008.jpg,1ESRD-DM [Code: [1]],[99.993385]
+4,./classifier_data/inference_samples/fullcontour_test_samples\nor00000.jpg,0Normal [Code: [0]],[99.85565]
+5,./classifier_data/inference_samples/fullcontour_test_samples\nor00002.jpg,0Normal [Code: [0]],[99.9482]
+6,./classifier_data/inference_samples/fullcontour_test_samples\nor00005.jpg,0Normal [Code: [0]],[84.05318]
+7,./classifier_data/inference_samples/fullcontour_test_samples\not00007.jpg,0Normal [Code: [0]],[95.8977]

@@ -1,0 +1,1 @@
+This folder contains the simulated contour images or (any images) seperated in different subfolder respesenting each class. This folder can be directly used by the Classifier module of CRISP for making training data set at custom train-test-split ratio. Not: only folders should b present NOT files
