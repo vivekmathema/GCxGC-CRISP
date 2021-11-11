@@ -103,29 +103,28 @@ Same as the Google Drive option. The main difference is that the models have to 
 We highly recommend all installations to be done on Python v3.6.8 (tested) 64 bit 
 ```
 
-## 1A) PRE-BUILT CRISP CPU PACKAGE  (out-of-the-box )
+## 1A) PRE-BUILT CRISP CPU PACKAGE (out-of-the-box)
 This is a recommended setup for non-technical users. User can directly downloaded the pre-built package and run the CRISP out-of-the-box
 
 ## The stand alone windows package for CPU version of python (which is slow but relatively simple than GPU version) google drive link
 
 ```
-https://drive.google.com/file/d/1B3c8JntkUtaQu3eaCL3UJjpOJiVVhr7X/view?usp=sharing
+https://drive.google.com/file/d/19XqYFoLMD05HNyzrUrF0kMGTXsvsHZez/view?usp=sharing
 ```
 
 After unzipping, goto "CRISP_root" folder and run by double clicking "run-crisp-cpu.bat" , the CRISP GUI interface should appear and you are ready to go. Please manually go to each folder (expect for python_env) to see instruction in the Readme.txt folder for downloading additional pre-trained models or Datasets.
 
 **The portable package contains full running example of most modules in CRISP. Just open and start the  Train/Inference/Synthesize button to view default examples.**
 
-## 1B) PRE-BULIT CRISP GPU PACKAGE  (out-of-the-box | Requires CUDA 11.0 and cuDNN 8.00 in installed)
+## 1B) PRE-BUILT CRISP GPU PACKAGE  (out-of-the-box | Requires CUDA 11.0 and cuDNN 8.00 in installed)
 
 ## The standalone GPU version of python is currently only available for Windows OS and required CUDA 9.5 or above along with cuDNN 7.5 or above along with packages in requirments_gpu.txt
 
 Windows Standalone GPU version for python 3.6  (Google Drive link)
 ```
-https://drive.google.com/file/d/1RbSH2ViIzf-SacdBR1sB7G4Z4ROjBdBL/view?usp=sharing
-
+https://drive.google.com/file/d/1f2YJ1yPOKsvsU04Wn6RMotj1kiU0UyD-/view?usp=sharing
 ```
-For  the CUDA Core installation (for windows OS)
+For the CUDA Core installation (for windows OS)
 ```
 CUDA Toolkit 11.0 Download
 https://developer.nvidia.com/cuda-11.0-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal
