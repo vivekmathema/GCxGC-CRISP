@@ -106,6 +106,9 @@ We highly recommend all installations to be done on Python v3.6.8 (tested) 64 bi
 ## 1A) PRE-BUILT CRISP CPU PACKAGE (out-of-the-box)
 This is a recommended setup for non-technical users. User can directly downloaded the pre-built package and run the CRISP out-of-the-box
 
+The standalone packages are compressed with 7Zip (https://www.7-zip.org/) to obtain maximum compression. Please insure that you have 7Zip or WinRAR (with Zip support) installed in your Windows systems to decompress the packages.
+
+
 ## The stand alone windows package for CPU version of python (which is slow but relatively simple than GPU version) google drive link
 
 ```
@@ -116,7 +119,7 @@ After unzipping, goto "CRISP_root" folder and run by double clicking "run-crisp-
 
 **The portable package contains full running example of most modules in CRISP. Just open and start the  Train/Inference/Synthesize button to view default examples.**
 
-## 1B) PRE-BUILT CRISP GPU PACKAGE  (out-of-the-box | Requires CUDA 11.0 and cuDNN 8.00 in installed)
+## 1B) PRE-BUILT CRISP GPU PACKAGE (out-of-the-box | Requires CUDA 11.0 and cuDNN 8.00 in installed)
 
 ## The standalone GPU version of python is currently only available for Windows OS and required CUDA 9.5 or above along with cuDNN 7.5 or above along with packages in requirments_gpu.txt
 
