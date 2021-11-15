@@ -23,7 +23,7 @@ A.                ROI & Deep Stacking
 B.                GAN-based Contour Training & Synthesis 
 C.                Coutour Enhancement 
 D.                Contour Classifier Training & Inference 
-Each module can be used independently or in combination for the opted outcome. However, the method can be applied for any other contour images of similar 2D datatype. Please Note once all steps A-D should be done for the same Mode during inference of unknown sample.
+Each module can be used independently or in combination for the opted outcome. However, the method can be applied for any other contour images of similar 2D datatype.Note: All steps A-D should be done for the same Mode during inference of unknown sample.
 
 
  ## CRISP has a Full operational graphical user interface (GUI) which allows easy opration of each modules
