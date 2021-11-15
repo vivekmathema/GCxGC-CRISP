@@ -35,7 +35,7 @@ Each module can be used independently or in combination for the opted outcome. H
 ## A. ROI & Deep Stacking
 
 •Manually choose ROI (1A.  Manual ROI selection): This section allows the user to manually select a single ROI graphically or based on input coordinates. It allows cropping of the region to get a single desired ROI with multiple additional options such as resizing, applying image filters, and output file type selection options. The extraction of initial contour data can be done in Normal RGB color mode which uses a pre-trained neural network for holistic edge-based feature extraction). Please note, once the Contour data is extracted in a certain mode, the same mode setting should be followed for all contour groups and future inferencing. Selection of ROI for only a single image per group folder is required, all images in the folder will be extracted for the same ROIs automatically. 
-•General Protocol: (1A.  Manual ROI selection tab) Select single images from each group --> Select single ROI/entire image from Contour -->  Extract ROIs (new folder will be created with extracted ROIs for all Contours). (Can apply additional mode filters like resizing, denoise as described earlier) 
+•General Protocol: (1A. Manual ROI selection tab) Select single images from each group --> Select single ROI/entire image from Contour -->  Extract ROIs (new folder will be created with extracted ROIs for all Contours). (Can apply additional mode filters like resizing, denoise as described earlier) 
     
 • AFRC construction (1B. Build AFRC): This is a novel procedure that allows the generalization of the groups of contour images that belong to pre-defined profiles in terms of weighted aggregate feature extraction. This allows dominant features to represent exclusively in the final single representative image and scarce or outliner features will be minimized algorithmically. This will result in a final AFRC, which will represent common/average dominant major features present in the group, and reduces manual selection bias. The parameters such as FPS, weight accumulation factor, and cyclic image duration will control the number of features to be represented in the final AFRI image. Several image augmentation features (e.g.: blur, noise, erosion, dilation) can be applied during the construction of AFRC image to enhance its coverage of the profile feature. The AFRI image can be automatically fetched into the subsequent module for AutoROI detection & DeepStacking. 
 •General protocol:  (1B. Build AFRC tab) Select any image from the Cropped ROI folder from 1A for two different classes of Contours --> Set the parameters (or use default) and apply filters if desired --> Process AFRC 
@@ -57,7 +57,7 @@ A super-resolution (SR) algorithm uses deep neural nets to clarify, sharpen, and
 •General protocol: (C. Super-resolution Tab) For training, selected dataset (SR training dataset) --> Setup hyperparameters (epochs, Learning rates, batch size) --> Train models. For Upscaling, select the folder containing low-resolution images (LR input) --> Select the folder containing trained models (SR model path) --> Input name of the trained model (SR model id) --> Press upscaling button --> Upscaled images will be stored on SR output path. 
   
 ## D.  Contour Classifier Training and Inference 
-This is the final module of Contour Profiler which uses a customized version of state-of-the-art deep convolutional neural networks (D-CNN) such as VGG16, VGG19 Inception V3, DenseNet, and ResNet for classification of Contour using Transfer learning. The technique is applicable for a relatively small amount of samples. This module has two submodules: (i) Trainer, which can train on input multiple classes of GC×GC-MS data. The data sets are separated into training and validation sets for evaluating both training and validation accuracy, receiver operator curves, and model loss function. The training module was a built-in image augmentation option, which can randomly conduct multiple image augmentation operations (e.g. image shearing, skewing, and distortion) for generating more diversity for the training network. (ii) Inference, is the ultimate terminal point of the ContourGAN platform. This uses the trained classifier model to conduct inference on the unknown samples and preset threshold. The GUI has real-time visualization of classification and validation accuracy, model loss function which enables users to instantly view the training status. The models can be continued training with updated datasets and training configuration can be stored for future use and unknown sample inferencing. A report file is generated consisting of the source images for inferencing and tagged images (optional) with their corresponding classification confidence. 
+This is the final module of Contour Profiler which uses a customized version of state-of-the-art deep convolutional neural networks (D-CNN) such as VGG16, VGG19 Inception V3, DenseNet, and ResNet for classification of Contour using Transfer learning. The technique is applicable for a relatively small amount of samples. This module has two submodules: (i) Trainer, which can train on input multiple classes of GC×GC-MS data. The data sets are separated into training and validation sets for evaluating both training and validation accuracy, receiver operator curves, and model loss function. The training module was a built-in image augmentation option, which can randomly conduct multiple image augmentation operations (e.g. image shearing, skewing, and distortion) for generating more diversity for the training network. (ii) Inference, is the ultimate terminal point of the CRISP platform. This uses the trained classifier model to conduct inference on the unknown samples and preset threshold. The GUI has real-time visualization of classification and validation accuracy, model loss function which enables users to instantly view the training status. The models can be continued training with updated datasets and training configuration can be stored for future use and unknown sample inferencing. A report file is generated consisting of the source images for inferencing and tagged images (optional) with their corresponding classification confidence. 
 
 • General Protocol: (D. Classification Training | Inference tab) For training, Set the source image dataset (Source images)--> Set the Model storage path (Model path) and Unique classifier model ID (Model id) --> Select the Dense Neural Net for Transfer learning model (default VGG)--> Set the hyperparameters (Learning rate/decay, Optimizers, batch size, Training Iterations… etc.) --> Set image augmentation (options in image augmentation tab) --> Start training. For Inference, Select the trained model path (model path) --> Input name of trained classifier model ID (Model id) --> Set Input image contour source (Test images) --> Set output inference result folder (Tagged images) & report file path and classification threshold and report file output format (Under Inferencing option tab)  --> Start Inferencing [Note: The preprocessing of data for inferencing should be done in the same manner as the model was trained for. i.e.: Full frame or ROI input in same image mode. For the Deep stacked contour images, the inference input should be of the same coordinates DeepStacked images as used for the training model. Use the (1A & C. AutoROIs and Deep Stacking Tab) and load the deep stacking data coordinates and preprocess the Input images before inputting for the inferencing. 
 
@@ -73,9 +73,9 @@ Dataset class name annotation rules
 -->The folder name should start with number "01Class,02Class,03Class..." which will be the same order of code (0x) marked during inferencing/classification for unknown samples
 
 Custom classifier database construction hints:
-Sample classifier dataset construction is ( ./CRISP_rootfolder/classifier_data/training_dataest_construct_example/mixCB_simulated_deepstacked_512res ) 
+Sample classifier dataset construction is (./CRISP_rootfolder/classifier_data/training_dataest_construct_example/mixCB_simulated_deepstacked_512res ) 
 
-CRISP--> [d) Classifier|Inference ]   -->  Build dataset --> whole dataset cosntruction option for training classifier
+CRISP--> [d) Classifier|Inference ]  -->  Build dataset --> whole dataset cosntruction option for training classifier
 basepath for entire classes          -->  ./CRISP_rootfolder/gan_data/output/simulation/ 
 dataset build path                   -->  ./CRISP_rootfolder/classifier_data/outputs/sample_dataset/
 datset basename                      -->  ESRD-NORMAL
@@ -88,11 +88,11 @@ CRISP has a built-in online model download module. This can be found under the "
 There are two ways models can be downloaded: (i) By using google drive (recommended)  & (ii) direct HTTP server 
 
 **(i) Google Drive option**
-Here, the link of the google shared folder should be provided along with google API, and files in the folder should be  ZIP/Tar ONLY for each model
+Here, the link of the google shared folder should be provided along with google API, and files in the folder should be ZIP files (.zip) ONLY for each model
 The CRISP automatically downloads the zipped model one at a time, and has provision to unzip and set as "use for processing"
 The option "Use Google Drive" should be enabled for this option to be selected.
 A demo google drive API is provided within the software but users have to set their google drive an API for goggle in the CRISP to use their custom google drive for online model use. Currently CRISP only supports the download of the model, the upload of the zipped model has to be done manually.
-[NOTE: Users may have to manually download using provided Google shared folder if the API-based internal download shows any issues due to large fiel size of updated Google policies]
+[NOTE: Users may have to manually download using provided Google shared folder if the API-based internal download shows any issues due to large file size of updated Google policies]
 
 **(ii) Http server option**
 Same as the Google Drive option. The main difference is that the models have to be stored in unsecured HTTP server. The option "Use google drive" should be deselected for this option to work.
@@ -104,7 +104,7 @@ Same as the Google Drive option. The main difference is that the models have to 
 We highly recommend all installations to be done on Python v3.6.8 (tested) 64 bit 
 ```
 
-CRISP utilizes the GC×GC-TOFMS contour images from ChromaTOF, which is mainly based on Windows OS. The CRISP has been well-tested to run on Windows 10 OS (64 bit) but all major function are compatible with Ubuntu 18.01 with all Python environment installed, based on requirements_(cpu|gpu).txt file. However, as CRISP depends on multiple external libraries, few manual adjustments may be required.
+**CRISP utilizes the GC×GC-TOFMS contour images from ChromaTOF, which is mainly based on Windows OS. The CRISP has been well-tested to run on Windows 10 OS (64 bit) but all major function are compatible with Ubuntu 18.01 with all Python environment installed, based on requirements_(cpu|gpu).txt file. However, as CRISP depends on multiple external libraries, few manual adjustments may be required.**
 
 
 ## 1A) PRE-BUILT CRISP CPU PACKAGE (out-of-the-box)
@@ -113,7 +113,7 @@ This is a recommended setup for non-technical users. User can directly downloade
 The standalone packages are compressed with 7Zip (https://www.7-zip.org/) to obtain maximum compression. Please insure that you have 7Zip or WinRAR (with Zip support) installed in your Windows systems to decompress the packages.
 
 
-## The stand alone windows package for CPU version of python (which is slow but relatively simple than GPU version) google drive link
+## The stand alone windows 10 64bit software package for CPU version of python (which is slow but relatively simple than GPU version) google drive link
 
 ```
 https://drive.google.com/file/d/19XqYFoLMD05HNyzrUrF0kMGTXsvsHZez/view?usp=sharing
@@ -143,8 +143,8 @@ https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.0.4/11.0_20
 After unzipping, goto "CRISP_root" folder and run by double clicking "run-crisp-gpu.bat" , the CRISP GUI interface sould appear and you are ready to go. Please manually go to each folder (expect for python_env) to see instruction in the Readme.txt folder for downloading additional pre-trained models or Datasets.
 
 
-## Running CRISP using Command line interface
-Current version of CRISP supports using configuration file to run Tran/inference/synthesis batch operation in CRISP. In order to run batch operation, goto windows console and change working directly to CRISP_root> Then, use run_console.bat from the command line in console.
+## Running CRISP using Command Line Interface
+Current version of CRISP supports using configuration file to run Train/Synthesis/Inference batch operation in CRISP. In order to run batch operation, goto windows console and change working directly to CRISP_root> Then, use run_console.bat from the command line in console.
 
 ```
 Command line help : (console) CRISP_root > run_console.bat crisp.py --help 
@@ -154,7 +154,7 @@ Example syntax    : (console) CRISP_root> run_console.bat crisp.py --run_session
 
 ## 2) MANUAL INSTALLATION OF CRISP 
 
-The manual installation requires cop yof ths CRISP source code 
+The manual installation requires copy of ths CRISP source code 
 
 **2A) Requirements for Python3 installation**
 
@@ -190,7 +190,7 @@ https://www.microsoft.com/en-us/download/confirmation.aspx?id=52685
 
 ## For creating Anaconda environment as OS independent version of CRISP, we currently recommend to use only CPU version. The GPU version requires advance CUDA installation knowledge for Linux and may not be suitable for starters. We will be providing support for installation in future as the project matures.
 
-For CPU Version of Anaconda environment of CRISP. Users may have to Tweak the installation versions if any repository needs were updated or conda channel changes. These commands will simply install conda version of the pip3 requirements to run CRISP. Maynot not be suitable for some version of Ubuntu OS
+**For CPU Version of Anaconda environment of CRISP. Users may have to Tweak the installation versions if any repository needs were updated or conda channel changes. These commands will simply install conda version of the pip3 requirements to run CRISP. May not be suitable for some version of Ubuntu OS**
 
 ```
 1) conda create --name GCxGC_CRISP python=3.6
@@ -199,9 +199,9 @@ For CPU Version of Anaconda environment of CRISP. Users may have to Tweak the in
 
 2.2) conda install --file requirements_gpu.txt (for GPU version, recommended for Windows OS)
 
-3) conda activate GCxGC_CRISP
+3)   conda activate GCxGC_CRISP
 
-4) (GCxGC_CRISP env) conda >  python3  crisp.py
+4)  (GCxGC_CRISP env) conda >  python3  crisp.py
 ```
 
 May need uses to adjust few libraries if there are some compatibilities issues.
@@ -220,21 +220,21 @@ python3 crisp.py    [-h | --help]
 
 optional arguments:
 
-  -h, --help          Shows this command line help message and exits CRISP
+  -h, --help              Shows this command line help message and exits CRISP
 
   --gui_type GUI_TYPE   
-                          Use different GUI Schemes. Five types available [ 0: Breeze, 1: Oxygen, 2: QtCurve, 3: Windows, 4:Fusion ]
+                          Use different GUI Schemes. Five types available [ 0: Breeze, 1: Oxygen, 2: QtCurve, 3: Windows, 4: Fusion ]
                           (There is also additional option to change skin colour of the GUI to Skyblue, Grayshade and System default in GUI mode only)
 
   --config_run CONFIG_RUN
-                        [Set 0: false, 1:true]. Run CRISP in GUI mode ONLY. No configuration modules will be run and CRISP will just GUI with default settings
+                        [Set 0: false, 1: true]. Run CRISP in GUI mode ONLY. No configuration modules will be run and CRISP will just GUI with default settings
 
   --config_fpath CONFIG_FPATH
-                        full pathname of the configuration file to run. The Confiruation file will be run without any user input or confrimation
-                        (example:   > python3.exe  crisp.py ./config/default.cfg )
+                        full pathname of the configuration file to run. The confiruation file (.conf) will be run without any further user input or confirmation.
+                        (example:   > python3.exe  crisp.py ./config/default.conf )
 
   --run_session RUN_SESSION
-                        [None,gan_train, gan_syn, train_sr, sr_inf, cls_train, cls_inf] | None : Only loads gui with selected configuration. Following modes are available:
+                        [None,gan_train, gan_syn, train_sr, sr_inf, cls_train, cls_inf] | None: Only loads GUI with selected configuration. Following modes are available:
 
                         gan_train  : Load and run gui for GAN model training
                         gan_syn    : Load and run gui for GAN synthesis
@@ -243,9 +243,10 @@ optional arguments:
                         cls_train  : Load and run gui for classifier training
                         cls_inf    : Load and run gui for classifier inferencing
                         
-                        NOTE:  Commandline configuration run is not currently available for ROIs and DeepStacking. 
-                               Due to large numbers of parameters the defination of  each parameter is commented in configuration file itself. 
-                               The Definations of most parameters are presented as tool tip text in status bar of GUI nterface.
+                    NOTE:  Command line configuration run is not currently available for ROIs and DeepStacking. 
+                           Due to large numbers of parameters the definition of each parameter is commented in configuration file itself. 
+                           The Definitions of most parameters are presented as tool tip text in status bar of GUI interface.
+
 
 ------------------------------------------------------------------------------------------------------------------
 
