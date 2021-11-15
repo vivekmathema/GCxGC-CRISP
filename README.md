@@ -2,14 +2,14 @@
 Notice: The software repository has most of its codes either in compiled form or protected with password to maintain confidentiality during review process. all source codes and related datasets will be fully released under suitable open source license once the main manuscript is accepted for publication
 ~~~
 
-This github repository is the software section of manuscript (under review) entitled "CRISP: A deep learning architecture for GC×GC-TOFMS contour ROI identification, simulation, and analysis of imaging metabolomics"  
+This github repository is the software section of manuscript (under review) entitled "CRISP: A deep learning architecture for GC×GC-TOFMS **C**ontour **R**OI **I**dentification, **S**imulation, and **P**rofiling in imaging metabolomics"  
 
 # General Overview of CRISP Software
 
 <img src="/images/graphical_summary.jpg" alt="CRISP Software Overview"/>
 
 
-## CRISP: A deep learning architecture for GC×GC-TOFMS Contour ROI identification, Simulation, and Profiling of imaging metabolomics 
+## CRISP: A deep learning architecture for GC×GC-TOFMS Contour ROI identification, Simulation, and Profiling in imaging metabolomics 
 
 **1. GENERAL INFORMATION**
    
