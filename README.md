@@ -227,7 +227,7 @@ optional arguments:
                           (There is also additional option to change skin colour of the GUI to Skyblue, Grayshade and System default in GUI mode only)
 
   --config_run CONFIG_RUN
-                        [Set 0: false, 1: true]. Run CRISP in GUI mode ONLY. No configuration modules will be run and CRISP will just GUI with default settings
+                        [Set 0: false, 1: true]. Run CRISP in GUI mode ONLY. No custom configuration modules will be loaded and CRISP will just run GUI with default settings.
 
   --config_fpath CONFIG_FPATH
                         full pathname of the configuration file to run. The confiruation file (.conf) will be run without any further user input or confirmation.
