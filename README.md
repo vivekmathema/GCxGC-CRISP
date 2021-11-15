@@ -250,5 +250,5 @@ optional arguments:
 
 ------------------------------------------------------------------------------------------------------------------
 
-**The CRISP software will be under constant development and minor bugs will be fixed overtime.** The main goal of making CRISP software open source is for encouraging larger community to participate, fork and assist in adoptation, custom use and continuous development of Deep learning-based techniques in GC×GC-TOFMS contour image metabolomics.
+**The CRISP software will be under constant development and minor bugs will be fixed overtime.** The main goal of making CRISP software open source is for encouraging larger community to participate, fork and assist in adaptation, custom use and continuous development of Deep learning-based techniques in GC×GC-TOFMS contour image metabolomics.
 
