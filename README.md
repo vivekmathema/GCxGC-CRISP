@@ -125,7 +125,7 @@ After unzipping, goto "CRISP_root" folder and run by double clicking "run-crisp-
 
 ## 1B) PRE-BUILT CRISP GPU PACKAGE (out-of-the-box | Requires CUDA 11.0 and cuDNN 8.00 in installed)
 
-## The standalone GPU version of python is currently only available for Windows OS and required CUDA 9.5 or above along with cuDNN 7.5 or above along with packages in requirments_gpu.txt
+**The standalone GPU version of python is currently only available for Windows10 OS and requires CUDA 9.5+ (CUDA11.00 tested) along with cuDNN 7.5+ (cuDNN 8.5 tested) along with packages in requirments_gpu.txt**
 
 Windows Standalone GPU version for python 3.6  (Google Drive link)
 ```
@@ -176,7 +176,7 @@ pip install -r requirements_cpu.txt
 
 ## Microsoft Visual C++ 2015 or 2019 Redistributable Update
 
-runtime-support may be needed to install for proper working of tesorflow-gpu. The 64 bit version can be directly installed from the supplied binaries in google drive : 
+In windows 10 OS, some runtime-support may be needed to install for proper working of tesorflow-gpu. The 64 bit version can be directly installed from the supplied binaries in google drive : 
 ```
 https://drive.google.com/file/d/1aSzn8cbMDICrXjG4WZyqkr5tNdYu2sro/view?usp=sharing
 ```
@@ -250,5 +250,5 @@ optional arguments:
 
 ------------------------------------------------------------------------------------------------------------------
 
-**The CRISP software will be under constant development and minor bugs will be fixed overtime.** The main goal of making the software open source is for letting larger community to participate, fork and assist in custom use and  continuous development of Deep learning-based techniques in GC×GC-TOFMS contour image metabolomics.
+**The CRISP software will be under constant development and minor bugs will be fixed overtime.** The main goal of making CRISP software open source is for encouraging larger community to participate, fork and assist in adoptation, custom use and continuous development of Deep learning-based techniques in GC×GC-TOFMS contour image metabolomics.
 
