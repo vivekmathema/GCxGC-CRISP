@@ -230,7 +230,7 @@ optional arguments:
                         (example:   > python3.exe  crisp.py ./config/default.cfg )
 
   --run_session RUN_SESSION
-                        [None,gan_train, gan_syn, train_sr, sr_inf, cls_train, cls_inf] | None : Only loads gui with selected configuration. Following modes are avaialble
+                        [None,gan_train, gan_syn, train_sr, sr_inf, cls_train, cls_inf] | None : Only loads gui with selected configuration. Following modes are available:
 
                         gan_train  : Load and run gui for GAN model training
                         gan_syn    : Load and run gui for GAN synthesis
