@@ -113,10 +113,10 @@ This is a recommended setup for non-technical users. User can directly downloade
 The standalone packages are compressed with 7Zip (https://www.7-zip.org/) to obtain maximum compression. Please insure that you have 7Zip or WinRAR (with Zip support) installed in your Windows systems to decompress the packages.
 
 
-## The stand alone windows 10 64bit software package for CPU version of python (which is slow but relatively simple than GPU version) google drive link
+## The stand alone windows 10 64bit software package for CPU version of python (which is slow but relatively simple to install than GPU version) google drive link below:
 
 ```
-https://drive.google.com/file/d/19XqYFoLMD05HNyzrUrF0kMGTXsvsHZez/view?usp=sharing
+https://drive.google.com/file/d/15-ALp2Ghclqehjfbv7bdbwrct5C1SV75/view?usp=sharing
 ```
 
 After unzipping, goto "CRISP_root" folder and run by double clicking "run-crisp-cpu.bat" , the CRISP GUI interface should appear and you are ready to go. Please manually go to each folder (expect for python_env) to see instruction in the Readme.txt folder for downloading additional pre-trained models or Datasets.
@@ -125,11 +125,11 @@ After unzipping, goto "CRISP_root" folder and run by double clicking "run-crisp-
 
 ## 1B) PRE-BUILT CRISP GPU PACKAGE (out-of-the-box | Requires CUDA 11.0 and cuDNN 8.00 in installed)
 
-**The standalone GPU version of python is currently only available for Windows10 OS and requires CUDA 9.5+ (CUDA11.00 tested) along with cuDNN 7.5+ (cuDNN 8.5 tested) along with packages in requirments_gpu.txt**
+**The standalone GPU version of python is currently only available for Windows10 OS and requires CUDA 11.0+ (CUDA11.00 tested) along with cuDNN 8.0++ (cuDNN 8.0 tested) along with packages in requirments_gpu.txt**
 
 Windows Standalone GPU version for python 3.6  (Google Drive link)
 ```
-https://drive.google.com/file/d/1f2YJ1yPOKsvsU04Wn6RMotj1kiU0UyD-/view?usp=sharing
+https://drive.google.com/file/d/1ZxbZiiT_qGoaAHw8AhGbKtFunHYWikRB/view?usp=sharing
 ```
 For the CUDA Core installation (for windows OS)
 ```
