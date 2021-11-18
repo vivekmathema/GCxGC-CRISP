@@ -64,10 +64,12 @@ This is the final module of Contour Profiler which uses a customized version of 
 
 NOTE: The results published in papers and those obtained using default option of CRISP software may differ due to constant upgrades in CRISP software. However, the fundamentals and trend of results remains the same.
 
-# A short video preview of CRISP running different modules in Youtube
-[<img src="/assets/crisp_preview.jpg" alt="CRISP Software Overview"/>
 
-[<img src="/assets/crisp_preview.jpg" alt="CRISP Software Overview"/>](https://youtu.be/Lc0J-2VmluA "CRISP: A Deep Learning Architecture for GC×GC-TOFMS Contour ROI Identification, Simulation, and Analysis in Imaging Metabolomics")
+# A short video preview of CRISP running different modules in Youtube
+
+[<img src="/assets/crisp_preview.jpg" alt="CRISP Software Overview"/>](https://youtu.be/Lc0J-2VmluA "Click to play in youtube CRISP: A Deep Learning Architecture for GC×GC-TOFMS Contour ROI Identification, Simulation, and Analysis in Imaging Metabolomics")
+
+
 
 
 ## CRISP Classifier Training | Inference module has builtin database construction module which allows generation of custom datasets
