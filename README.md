@@ -118,10 +118,12 @@ The standalone packages are compressed with 7Zip (https://www.7-zip.org/) to obt
 ## The stand alone windows 10 64bit software package for CPU version of python (which is slow but relatively simple to install than GPU version) google drive link below:
 
 ```
-https://drive.google.com/file/d/15-ALp2Ghclqehjfbv7bdbwrct5C1SV75/view?usp=sharing
+https://drive.google.com/file/d/1TOCj_5wvbrh1oazrD0Ptp_oiiv2MiL7u/view?usp=sharing
 ```
 
-After unzipping, goto "CRISP_root" folder and run by double clicking "run-crisp-cpu.bat" , the CRISP GUI interface should appear and you are ready to go. Please manually go to each folder (expect for python_env) to see instruction in the Readme.txt folder for downloading additional pre-trained models or Datasets.
+After unzipping, goto "CRISP_root" folder and run by double clicking "run-crisp-cpu.bat" , the CRISP GUI interface should appear and you are ready to go. Please manually go to each folder (expect for python_env) to see instruction in the Readme.txt folder for downloading additional pre-trained models or Datasets. 
+CPU version of CRISP will ignore any GPU instructions and only run on CPU cores
+
 
 **The portable package contains full running example of most modules in CRISP. Just open and start the  Train/Inference/Synthesize button to view default examples.**
 
@@ -130,9 +132,12 @@ After unzipping, goto "CRISP_root" folder and run by double clicking "run-crisp-
 **The standalone GPU version of python is currently only available for Windows10 OS and requires CUDA 11.0+ (CUDA11.00 tested) along with cuDNN 8.0++ (cuDNN 8.0 tested) along with packages in requirments_gpu.txt**
 
 Windows Standalone GPU version for python 3.6  (Google Drive link)
+
 ```
-https://drive.google.com/file/d/1ZxbZiiT_qGoaAHw8AhGbKtFunHYWikRB/view?usp=sharing
+https://drive.google.com/file/d/1VZ3BKWTNuM-lOeRzhSBXsTT1_z5DrSGt/view?usp=sharing
 ```
+
+
 For the CUDA Core installation (for windows OS)
 ```
 CUDA Toolkit 11.0 Download
@@ -150,7 +155,7 @@ Current version of CRISP supports using configuration file to run Train/Synthesi
 
 ```
 Command line help : (console) CRISP_root > run_console.bat crisp.py --help 
-Example syntax    : (console) CRISP_root> run_console.bat crisp.py --run_session  cls_inf   --config_fpath  ./config/default.conf 
+Example syntax    : (console) CRISP_root > run_console.bat crisp.py --run_session  cls_inf   --config_fpath  ./config/default.conf 
 ```
 
 
