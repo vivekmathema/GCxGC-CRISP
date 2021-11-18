@@ -62,6 +62,8 @@ This is the final module of Contour Profiler which uses a customized version of 
 • General Protocol: (D. Classification Training | Inference tab) For training, Set the source image dataset (Source images)--> Set the Model storage path (Model path) and Unique classifier model ID (Model id) --> Select the Dense Neural Net for Transfer learning model (default VGG)--> Set the hyperparameters (Learning rate/decay, Optimizers, batch size, Training Iterations… etc.) --> Set image augmentation (options in image augmentation tab) --> Start training. For Inference, Select the trained model path (model path) --> Input name of trained classifier model ID (Model id) --> Set Input image contour source (Test images) --> Set output inference result folder (Tagged images) & report file path and classification threshold and report file output format (Under Inferencing option tab)  --> Start Inferencing [Note: The preprocessing of data for inferencing should be done in the same manner as the model was trained for. i.e.: Full frame or ROI input in same image mode. For the Deep stacked contour images, the inference input should be of the same coordinates DeepStacked images as used for the training model. Use the (1A & C. AutoROIs and Deep Stacking Tab) and load the deep stacking data coordinates and preprocess the Input images before inputting for the inferencing. 
 
 
+NOTE: The results published in papers and those obtained using default option of CRISP software may differ due to constant upgrades in CRISP software. However, the fundamentals and trend of results remains the same.
+
 ## CRISP Classifier Training | Inference module has builtin database construction module which allows generation of custom datasets
 
 ```
