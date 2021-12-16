@@ -274,7 +274,7 @@ optional arguments:
 @article {vbm2021crisp,
    title ={CRISP: A Deep Learning Architecture for GC×GC-TOFMS Contour ROI Identification, Simulation, and Analysis in Imaging Metabolomics},
    author={Mathema VB, Duangkumpha K, Wanichthanarak K, Jariyasopit N, Dhakal E, Sathirapongsasuti N, Kitiyakara C, Sirivatanauksorn Y, Khoomrung S},
-   journal={(BIB)},
+   journal={BIB},
    year={2021}
    }
 ```
