@@ -142,7 +142,7 @@ CPU version of CRISP will ignore any GPU instructions and only run on CPU cores
 Windows Standalone GPU version for python 3.6  (Google Drive link)
 
 ```
-https://drive.google.com/file/d/1VZ3BKWTNuM-lOeRzhSBXsTT1_z5DrSGt/view?usp=sharing
+https://drive.google.com/file/d/1OpJT8bHxVJiJ14j_0liL8q4Fd5O7Rb4d/view?usp=sharing
 ```
 
 
@@ -270,10 +270,11 @@ optional arguments:
 --------------------------------------------------------------------------------------------------------------
 
 ## Citation
-
+```
 @article {vbm2021crisp,
    title ={CRISP: A Deep Learning Architecture for GC×GC-TOFMS Contour ROI Identification, Simulation, and Analysis in Imaging Metabolomics},
    author={Mathema VB, Duangkumpha K, Wanichthanarak K, Jariyasopit N, Dhakal E, Sathirapongsasuti N, Kitiyakara C, Sirivatanauksorn Y, Khoomrung S},
    journal={(BIB)},
    year={2021}
    }
+```
