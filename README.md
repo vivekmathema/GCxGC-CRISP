@@ -126,7 +126,7 @@ The standalone packages are compressed with 7Zip (https://www.7-zip.org/) to obt
 ## The stand alone windows 10 64bit software package for CPU version of python (which is slow but relatively simple to install than GPU version) google drive link below:
 
 ```
-https://drive.google.com/file/d/1TOCj_5wvbrh1oazrD0Ptp_oiiv2MiL7u/view?usp=sharing
+https://drive.google.com/file/d/1w3hIKGnaZ_oMj_bhQ6F3t5XhDtF0MONm/view?usp=sharing
 ```
 
 After unzipping, goto "CRISP_root" folder and run by double clicking "run-crisp-cpu.bat" , the CRISP GUI interface should appear and you are ready to go. Please manually go to each folder (expect for python_env) to see instruction in the Readme.txt folder for downloading additional pre-trained models or Datasets. 
