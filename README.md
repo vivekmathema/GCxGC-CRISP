@@ -1,5 +1,5 @@
 ~~~
-Notice: The manuscript is currently in final stages of publication. All codes will be released after final online publication. The software repository has most of its codes either in compiled form or protected with password to maintain confidentiality during review process. all source codes and related datasets will be fully released under suitable open source license once the main manuscript is accepted for publication
+Notice: The manuscript is currently in final stages of online publication.
 ~~~
 
 This github repository is the software section of manuscript (under review) entitled "CRISP: A deep learning architecture for GC×GC-TOFMS **C**ontour **R**OI **I**dentification, **S**imulation, and **P**rofiling in imaging metabolomics"  
