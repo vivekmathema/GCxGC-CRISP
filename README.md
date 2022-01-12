@@ -1,8 +1,4 @@
-~~~
-Notice: The manuscript is currently in final stages of online publication.
-~~~
-
-This github repository is the software section of manuscript (under review) entitled "CRISP: A deep learning architecture for GC×GC-TOFMS **C**ontour **R**OI **I**dentification, **S**imulation, and **P**rofiling in imaging metabolomics"  
+This is the official github repository for the software section of article entitled "CRISP: A deep learning architecture for GC×GC-TOFMS **C**ontour **R**OI **I**dentification, **S**imulation, and **P**rofiling in imaging metabolomics"  
 
 # General Overview of CRISP Software
 
