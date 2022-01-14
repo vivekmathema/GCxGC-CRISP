@@ -5,6 +5,13 @@ This is the official github repository for the software section of article entit
 <img src="/images/graphical_summary.jpg" alt="CRISP Software Overview"/>
 
 
+This is the software part of publication in Briefings in Bioinformatics, Oxford Univ. Press December 2021 :
+```
+Vivek Bhakta Mathema, Kassaporn Duangkumpha, Kwanjeera Wanichthanarak, Narumol Jariyasopit, Esha Dhakal, Nuankanya Sathirapongsasuti, Chagriya Kitiyakara, Yongyut Sirivatanauksorn, Sakda Khoomrung, CRISP: a deep learning architecture for GC × GC–TOFMS contour ROI identification, simulation and analysis in imaging metabolomics, Briefings in Bioinformatics, 2022;, bbab550, https://doi.org/10.1093/bib/bbab550
+
+Article link: https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbab550/6503617
+```
+
 ## CRISP: A deep learning architecture for GC×GC-TOFMS Contour ROI identification, Simulation, and Profiling in imaging metabolomics 
 
 **1. GENERAL INFORMATION**
